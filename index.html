@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function display(){
+            document.getElementById("Myusername").innerHTML = document.getElementById("username").value + "'s gallery"
+        }
+        function setImage(){
+            document.getElementById("profileimg").style.backgroundImage = "url(" + document.getElementById("img_url").value + ")" ; // url(*link to your image*)
+        }
+    </script>
 </head>
 <body>
     <div class="content">
         <div class="flex-top">
             <div class="flex-item1"> 
                 <!-- Avatar -->
-                <div class="avatar">
-                    
-                </div>
+                <div class="avatar" id="profileimg"></div>
                 <div class="noti">2</div>
-                <div><p style="font-weight: 700;"> Username, Gallery </p></div>
+                <div><p style="font-weight: 700;" id="Myusername"> Username, Gallery </p></div>
             </div>
             <div class="flex-item2"> 
                 <!-- Input -->
-                <div><label for="username">username</label><input type="text" id="username" style="margin: 5px;"><button type="submit">Submit</button></div>
-                <div><label for="img_url" style="text-align: center;"">img_url       </label><input type="text" id="img_url" style="margin: 5px;"><button type="submit">Submit</button></div>
+                <div><label for="username">username</label><input type="text" id="username" style="margin: 5px;"><button type="submit" onclick="display()">Set</button></div>
+                <div><label for="img_url" style="text-align: center;"">img_url       </label><input type="text" id="img_url" style="margin: 5px;"><button onclick="setImage()">Set</button></div>
             </div>
         </div>
     <div class="gallery">
