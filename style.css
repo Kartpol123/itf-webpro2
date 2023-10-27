@@ -1,0 +1,45 @@
+body{
+    font-family: sans-serif;
+}
+
+.content{
+    border: 3px solid grey;
+    width: 1024px;
+    margin: auto;
+}
+
+.flex-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.flex-item1{
+    margin-top: 48px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.noti{
+    position: absolute;
+    display: grid;
+    background-color: tomato;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 999px;
+    right: 5px;
+    bottom: 56px;
+    place-items: center;
+    color: white ;
+}
+
+.avatar{
+    background-color: gray;
+    overflow: auto;
+    width: 128px;
+    height: 128px;
+    border-radius: 128px;
+}
